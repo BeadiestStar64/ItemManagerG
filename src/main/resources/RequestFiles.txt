@@ -1,0 +1,8 @@
+# RequestFiles.txt is a list of files to copy from the resource.
+# DO NOT EDIT THIS SECTION
+<-- version: 1.0.0 -->
+<-- skip: BSCore -->
+# DO NOT EDIT THIS SECTION
+config.yml
+lang, en_us.yml
+lang, ja_jp.yml

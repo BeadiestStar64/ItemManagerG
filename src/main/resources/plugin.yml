@@ -1,0 +1,71 @@
+name: ItemManagerG
+version: '${project.version}'
+main: com.github.beadieststar64.plugins.itemmanagerg.ItemManagerG
+api-version: '1.20'
+prefix: ItemManager-G
+depend: [LuckPerms]
+softdepend: [BSCore, ChestShop]
+authors: [BeadiestStar64]
+website: https://github.com/BeadiestStar64/ItemManagerG
+
+commands:
+  manager:
+    aliases:
+      - im
+      - img
+permissions:
+  # Admin Permission
+  itemmanagerg.admin.all:
+    description: All ItemManagerG commands will be available.
+    default: false
+    children:
+      itemmanagerg.admin.exclusion: true
+      itemmanagerg.admin.special: true
+  itemmanagerg.admin.exclusion:
+    description: It is possible to set exclusion so that the protect function, which prevents items registered in ItemManagerG from being sold, does not work.
+    default: false
+    children:
+      itemmanagerg.admin.basic: true
+  itemmanagerg.admin.special:
+    description: Make available items that are only available in creative mode or on command.
+    default: false
+    children:
+      itemmanagerg.admin.basic: true
+  itemmanagerg.admin.basic:
+    default: false
+    children:
+      itemmanagerg.manager.all: true
+  # Advanced Permission
+  itemmanagerg.manager.all:
+    default: false
+    children:
+      itemmanagerg.manager.create: true
+      itemmanagerg.manager.overenchanting: true
+      itemmanagerg.manager.registration: true
+      itemmanagerg.manager.basic: true
+  itemmanagerg.manager.create:
+    default: op
+    children:
+      itemmanagerg.manager.basic: true
+  itemmanagerg.manager.overenchanting:
+    default: op
+    children:
+      itemmanagerg.manager.basic: true
+  itemmanagerg.manager.registration:
+    default: op
+    children:
+      itemmanagerg.manager.basic: true
+  itemmanagerg.manager.basic:
+    default: op
+    children:
+      itemmanagerg.citizen.all: true
+  # Basic Permission
+  itemmanagerg.citizen.all:
+    default: false
+    children:
+      itemmanagerg.citizen.edit: true
+      itemmanagerg.citizen.color: true
+  itemmanagerg.citizen.edit:
+    default: true
+  itemmanagerg.citizen.color:
+    default: true

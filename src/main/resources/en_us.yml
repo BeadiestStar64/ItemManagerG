@@ -1,0 +1,25 @@
+console:
+  type:
+    sender:
+      console: Console
+      player: Player
+      command-block: Command Block
+  error:
+    deny-permission-sender-type: This command is not available from the -SENDER-. by ItemManagerG
+  info:
+    soft-depend-information: -PLUGIN- is a recommended plugin for ItemManagerG. We recommend that you download it.
+mode:
+  registration: ItemManagerG Registration Mode
+  edit: ItemManagerG Edit Mode
+  remove: ItemManager Remove Mode
+  view: ItemManager View Mode
+commands:
+  command-list:
+    help:
+      version: Display the version of the ItemManagerG.
+      registration: Register the item. Once registered, the item can be edited.
+      wiki: Display the Wiki home page.
+    wiki: Click here to view the Wiki. (Opens GitHub Wiki)
+entrance:
+  null: Not set
+  material: Material

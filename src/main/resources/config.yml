@@ -1,0 +1,45 @@
+# +----------------+
+# | Global Setting |
+# +----------------+
+language: en_us
+
+# +-----------------+
+# | Depends Setting |
+# +-----------------+
+soft-depends:
+  - BSCore
+  - ChestShop
+  - LuckPerms
+# Use bscore
+# - BSCore is a basic functionality providing plugin created by the author of this plugin; in the ItemManagerG version, this functionality is disabled by default.
+#   To use BSCore, download the release from here (https://github.com/BeadiestStar64/BSCore) and install it in the plugins' folder.
+use-bscore: false
+# Use chestshop
+# - It is possible to prevent items registered in ItemManager from being sold.
+#   To use this function, please install ChestShop3(https://dev.bukkit.org/projects/chestshop).
+use-chestshop: true
+# Use luckperms
+# - Caution!
+#   ItemManager assigns functions per player permissions.
+#   The recommended permission plugin for ItemManager is LuckPerms(https://luckperms.net/).
+use-luckperms: true
+
+# +--------------------+
+# | Permission Setting |
+# +--------------------+
+permission:
+  admin:
+    all: itemmanagerg.admin.all
+    basic: itemmanagerg.admin.basic
+    exclusion: itemmanagerg.admin.exclusion
+    special-items: itemmanagerg.admin.special
+  manager:
+    super-manager: itemmanagerg.manager.all
+    basic: itemmanagerg.manager.basic
+    create: itemmanagerg.manager.create
+    over-enchanting: itemmanagerg.manager.overenchanting
+    registration: itemmanagerg.manager.registration
+  citizen:
+    super-citizen: itemmanagerg.citizen.all
+    edit: itemmanagerg.citizen.edit
+    change-color: itemmanagerg.citizen.color

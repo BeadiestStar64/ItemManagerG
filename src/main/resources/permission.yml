@@ -1,0 +1,78 @@
+Permissions:
+  - itemmanagerg.admin.all
+  - itemmanagerg.admin.exclusion
+  - itemmanagerg.admin.special
+  - itemmanagerg.admin.basic
+  - itemmanagerg.manager.all
+  - itemmanagerg.manager.create
+  - itemmanagerg.manager.overenchanting
+  - itemmanagerg.manager.registration
+  - itemmanagerg.manager.basic
+  - itemmanagerg.citizen.all
+  - itemmanagerg.citizen.edit
+  - itemmanagerg.citizen.color
+# Admin Permission
+itemmanagerg.admin.all:
+  description: All ItemManagerG commands will be available.
+  default: false
+  children-count: 2
+  children:
+    itemmanagerg.admin.exclusion: true
+    itemmanagerg.admin.special: true
+itemmanagerg.admin.exclusion:
+  description: It is possible to set exclusion so that the protect function, which prevents items registered in ItemManagerG from being sold, does not work.
+  default: false
+  children-count: 1
+  children:
+    itemmanagerg.admin.basic: true
+itemmanagerg.admin.special:
+  description: Make available items that are only available in creative mode or on command.
+  default: false
+  children-count: 1
+  children:
+    itemmanagerg.admin.basic: true
+itemmanagerg.admin.basic:
+  default: false
+  children-count: 1
+  children:
+    itemmanagerg.manager.all: true
+# Advanced Permission
+itemmanagerg.manager.all:
+  default: false
+  children-count: 4
+  children:
+    itemmanagerg.manager.create: true
+    itemmanagerg.manager.overenchanting: true
+    itemmanagerg.manager.registration: true
+    itemmanagerg.manager.basic: true
+itemmanagerg.manager.create:
+  default: op
+  children-count: 1
+  children:
+    itemmanagerg.manager.basic: true
+itemmanagerg.manager.overenchanting:
+  default: op
+  children-count: 1
+  children:
+    itemmanagerg.manager.basic: true
+itemmanagerg.manager.registration:
+  default: op
+  children-count: 1
+  children:
+    itemmanagerg.manager.basic: true
+itemmanagerg.manager.basic:
+  default: op
+  children-count: 1
+  children:
+    itemmanagerg.citizen.all: true
+# Basic Permission
+itemmanagerg.citizen.all:
+  default: false
+  children-count: 2
+  children:
+    itemmanagerg.citizen.edit: true
+    itemmanagerg.citizen.color: true
+itemmanagerg.citizen.edit:
+  default: true
+itemmanagerg.citizen.color:
+  default: true
